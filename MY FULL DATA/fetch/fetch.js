@@ -3,7 +3,7 @@ async function getData() {
     const data = await response.json();
 
     let tab = '';
-    data.users.forEach(function (user) {
+    data.users.forEach(function (user) { 
         tab += `
             <tr>
                 <td>${user.firstName}</td>

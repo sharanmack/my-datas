@@ -99,8 +99,7 @@ span.psw {
     <input type="password" placeholder="Enter Password" id="password" required>
 
     <button type="button" id="loginButton">Login</button>
-    
-
+  
     <p id="loginMessage"></p>
 
      
@@ -115,6 +114,10 @@ span.psw {
       </div> -->
 
   </form>
+  <form action="http://127.0.0.1:5500/MY%20FULL%20DATA/like.html">
+    <button type="submit" id="Register">Register</button>
+</form>
+
 
   <script>
 
@@ -131,7 +134,7 @@ span.psw {
 
 
       if (username === "MACK" && password === "MACK") {
-        window.location.href = "http://127.0.0.1:5501/MYDATA.HTML";
+        window.location.href = "http://127.0.0.1:5500/MY%20FULL%20DATA/MYDATA.HTML";
       } else {
         loginMessage.textContent = "Invalid username or password. Please try again.";
       }
