@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My first web page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /* Your CSS styles here... */
+    </style>
+</head>
+<body>
+    <!-- Search box container -->
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search...">
+        <button id="searchButton" class="button-style">Search</button>
+    </div>
+
+    <!-- Button to trigger "Find" -->
+    <!-- <button id="findButton" class="button-style">Find (Ctrl+F)</button> -->
+
+    <!-- Rest of your HTML content... -->
+
+    <script>
+        // JavaScript for the search box
+        const searchInput = document.getElementById("searchInput");
+        const searchButton = document.getElementById("searchButton");
+        const findButton = document.getElementById("findButton");
+
+        searchButton.addEventListener("click", function () {
+            const query = searchInput.value;
+            performSearch(query);
+        });
+
+        findButton.addEventListener("click", function () {
+            // Trigger the browser's "Find" operation
+            document.execCommand("find");
+        });
+
+        // Your other JavaScript code...
+    </script>
+</body>
+</html>

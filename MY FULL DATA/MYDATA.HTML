@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My first web page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <style>
+    
+        body {
+            padding: 25px;
+            background-color: #ffffff;
+            color: #333;
+            font-size: 18px;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+        }
+
+        .dark-mode {
+            background-color: #333;
+            color: white;
+        }
+
+        #lo {
+            width: 100px;
+            height: 40px;
+            background-color: #ecf5cd;
+            border: none;
+            color: #333;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        #lo:hover {
+            background-color: #c5d98b;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .avatar {
+            width: 150px;
+            border-radius: 50%;
+            margin-right: 20px;
+            border: 5px solid #d3ff32;
+        }
+
+        .username {
+            font-weight: bold;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        hr {
+            width: 40%;
+            margin-left: 0;
+            height: 1px;
+            background-color: #333;
+            border: none;
+        }
+
+        .button-style {
+            font-size: 18px;
+            padding: 10px 20px;
+            background-color: #e4ff85;
+            color: #333;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .button-style:hover {
+            background-color: #3f4d15;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .fa {
+            padding: 10px;
+            font-size: 24px;
+            width: 30px;
+            text-align: center;
+            text-decoration: none;
+            margin: 5px 2px;
+            border-radius: 50%;
+        }
+
+        .fa:hover {
+            opacity: 0.7;
+        }
+
+        .fa-facebook {
+            background: #3B5998;
+            color: white;
+        }
+
+        .fa-twitter {
+            background: #55ACEE;
+            color: white;
+        }
+
+        .fa-linkedin {
+            background: #007bb5;
+            color: white;
+        }
+
+        .fa-youtube {
+            background: #bb0000;
+            color: white;
+        }
+
+        .fa-instagram {
+            background: #125688;
+            color: white;
+        }
+
+        .main {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .right {
+            width: 60%;
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+            border: 5px solid #ecf5cd;
+        }
+
+        h2 {
+            font-size: 28px;
+            margin-top: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        button {
+            background-color: #ecf5cd;
+            color: #333;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #df8938;
+        }
+
+        select {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div style="display: flex; justify-content: flex-end;">
+        <button id="darkModeButton" class="button-style" onclick="myFunction()">Dark mode</button>
+        <form action="http://127.0.0.1:5501/AGE.HTML">
+            <button id="logoutButton" class="button-style">Log out</button>
+        </form>
+    </div>
+    
+    
+    <p>_____________________________________________________________________________________________________________________________________________________________</p>
+
+    <img class="avatar" src="1677743514653.jpg" alt="Description of the image">
+    <h2><p class="username">SHARAN MACK</p></h2>
+    <hr>
+
+    <h2 class="WHOAMI">WHO AM I</h2>
+    <button id="whoamiButton" onclick="toggleContent('whoamiContent')">WHO AM I</button>
+    <div id="whoamiContent" class="hidden">
+        <p>Passionate & Enthusiastic graduate greatly influenced by
+            the urge to learn more. Perfectionist in<span id="dots">......</span><span id="more" style="display: none;"> work. Looking
+            forward for an opportunity that would help me to grow
+            technically and at the same time to know my maximum
+            potential that would help with the growth of the from that
+            I'm about to work.</span></p>
+        <button onclick="toggleReadMore()">Read more</button>
+    </div>
+
+    <hr>
+
+    <h2>EDUCATION</h2>
+    <button id="educationButton" onclick="toggleContent('educationContent')">EDUCATION</button>
+    <div id="educationContent" class="hidden">
+        <h3>SCHOOLING:</h3>
+        <p>>> St. John's Matriculation
+            Higher Secondary School ((10th))
+        </p>
+        <p>>> St. John's Matriculation
+            Higher Secondary School ((12th))
+        </p>
+        <br>
+        <h2>DEGREES:</h2>
+        <p>>> K.G college of arts and science
+            ((Bachelors in Computer Application))
+        </p>
+        <p>>> University of the West of Scotland  ((MSC Project Management))
+        </p>
+    </div>
+
+    <hr>
+
+    <h2>WORK EXPERIENCE</h2>
+    <button id="workButton" onclick="toggleContent('workContent')">WORK EXPERIENCE</button>
+    <div id="workContent" class="hidden">
+        <p>>> SPORTZFIXTURE ((Quality Analyst)) ((Jun 2019 -
+            Jan 2021))
+        </p>
+    </div>
+
+    <hr>
+
+    <h2>SKILLS</h2>
+    <button id="skillsButton" onclick="toggleContent('skillsContent')">SKILLS</button>
+    <div id="skillsContent" class="hidden">
+        <h3><p>>> Communication Skills</p></h3>
+        <h3><p>>> Creativity</p></h3>
+        <h3><p>>> Perseverance</p></h3>
+        <h3><p>>> Presentation</p></h3>
+        <h3><p>>> Effective Time Management</p></h3>
+        <h3><p>>> Ability to Work Under Pressure</p></h3>
+        <h3><p>>> Teamwork</p></h3>
+    </div>
+
+    <hr>
+
+    <h2>LANGUAGE</h2>
+    <button id="languageButton" onclick="toggleContent('languageContent')">LANGUAGE</button>
+    <div id="languageContent" class="hidden">
+        <br>
+        <h3><p>>> ENGLISH</p></h3>
+        <h3><p>>> TAMIL</p></h3>
+    </div>
+
+    <hr>
+
+    <h2>CERTIFICATIONS</h2>
+    <button id="certificationsButton" onclick="toggleContent('certificationsContent')">CERTIFICATIONS</button>
+    <div id="certificationsContent" class="hidden">
+        <br>
+        <label for="yearSelect">SELECT YEAR:</label>
+        <select id="yearSelect">
+            <option value="2015">2015</option>
+            <option value="2016">2016</option>
+            <option value="2017">2017</option>
+            <option value="2018">2018</option>
+            <option value="2019">2019</option>
+        </select>
+        <p>SELECTED YEAR:<span id="selectedYear"></span></p>
+        <h2><p class="certification hidden" data-year="2015">CLOUD CODER LEARNING (2015)</p></h2>
+        <h2><p class="certification hidden" data-year="2016">WHITE HAT HACKER LEVEL -1 (2016)</p></h2>
+        <h2><p class="certification hidden" data-year="2017">CISCO NETWORK (2017)</p></h2>
+        <h2><p class="certification hidden" data-year="2018">PHP & MYSQL (2018)</p></h2>
+        <h2><p class="certification hidden" data-year="2019">NATIONAL HANDLOOM FASHION SHOW (2019)</p></h2>
+    </div>
+
+    <hr>
+
+    <h2>HONORS & AWARDS</h2>
+    <button id="honorsButton" onclick="toggleContent('honorsContent')">HONORS & AWARDS</button>
+    <div id="honorsContent" class="hidden">
+        <BR>
+        <label for="honorYearSelect">SELECT YEAR:</label>
+        <select id="honorYearSelect">
+            <option value="2016 ">2016</option>
+            <option value="2017 ">2017</option>
+            <option value="2018 ">2018</option>
+            <option value="2019 ">2019</option>
+            <option value="2020 ">2020</option>
+        </select>
+        <p>SELECTED YEAR:<span id="selectedHonorYear"></span></p>
+        <h2><p class="honor hidden" data-year="2018 ">PHP & MYSQL Course (AUG 2018)</p></h2>
+        <h2><p class="honor hidden" data-year="2019 ">Microsoft VB.Net Programming Course (OCT 2019)</p></h2>
+        <h2><p class="honor hidden" data-year="2016 ">HTML Course (NOV 2016)</p></h2>
+        <h2><p class="honor hidden" data-year="2017 ">Linux & Shell Scripting (DEC 2017)</p></h2>
+        <h2><p class="honor hidden" data-year="2020 ">Oracle SQL & PL/SQL (NOV 2020)</p></h2>
+    </div>
+
+    <hr>
+
+    <h2>CONTACT</h2>
+    <button id="contactButton" onclick="toggleContent('contactContent')">CONTACT</button>
+    <div id="contactContent" class="hidden">
+        <a href="https://www.facebook.com/sharan.mack?mibextid=LQQJ4d" class="fa fa-facebook"></a>
+        <a href="https://x.com/MackVinith?s=20" class="fa fa-twitter"></a>
+        <a href="https://www.linkedin.com/in/sharan-mack-63a94016b" class="fa fa-linkedin"></a>
+        <a href="https://youtube.com/shorts/V3XCJafYfzc?si=KNOgQf_gUob2NqtA" class="fa fa-youtube"></a>
+        <a href="https://instagram.com/sharanm_a_c_k" class="fa fa-instagram"></a>
+
+        <div class="main">
+            <div class="margin-top","margin-right">
+                <div class="right">
+                    <video src='VIDEO2.mp4' controls></video>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <h2>GET IN TOUCH</h2>
+    <form action="http://127.0.0.1:5501/fetch/email/email.html">
+        <button class="button-style">GET IN TOUCH</button>
+    </form>
+
+<script>
+
+
+let contentVisible = {
+    whoamiContent: false,
+    educationContent: false,
+    workContent: false,
+    skillsContent: false,
+    languageContent: false,
+    certificationsContent: false,
+    honorsContent: false,
+    contactContent: false,
+};
+
+function toggleContent(contentId) {
+    const content = document.getElementById(contentId);
+    if (contentVisible[contentId]) {
+        content.style.display = 'none';
+    } else {
+        content.style.display = 'block';
+    }
+    contentVisible[contentId] = !contentVisible[contentId];
+}
+
+var expanded = false;
+
+function toggleReadMore() {
+    var dots = document.getElementById("dots");
+    var moreText = document.getElementById("more");
+    var btnText = document.getElementById("myBtn");
+
+    if (!expanded) {
+        dots.style.display = "none";
+        moreText.style.display = "inline";
+        btnText.innerHTML = "Read less";
+        expanded = true;
+    } else {
+        dots.style.display = "inline";
+        moreText.style.display = "none";
+        btnText.innerHTML = "Read more";
+        expanded = false;
+    }
+}
+
+const yearSelect = document.getElementById('yearSelect');
+const selectedYear = document.getElementById('selectedYear');
+const certifications = document.querySelectorAll('.certification');
+
+yearSelect.addEventListener('change', function() {
+    const selected = yearSelect.value;
+    selectedYear.textContent = selected;
+    certifications.forEach(cert => cert.classList.add('hidden'));
+
+    const selectedCert = document.querySelector(`[data-year="${selected}"]`);
+    if (selectedCert) {
+        selectedCert.classList.remove('hidden');
+    }
+});
+
+
+
+const honorYearSelect = document.getElementById('honorYearSelect');
+const selectedHonorYear = document.getElementById('selectedHonorYear');
+const honors = document.querySelectorAll('.honor');
+
+honorYearSelect.addEventListener('change', function() {
+    const selected = honorYearSelect.value;
+    selectedHonorYear.textContent = selected;
+    honors.forEach(honor => honor.classList.add('hidden'));
+
+    const selectedHonor = document.querySelector(`[data-year="${selected}"]`);
+    if (selectedHonor) {
+        selectedHonor.classList.remove('hidden');
+    }
+});
+
+
+
+function myFunction() {
+var element = document.body;
+element.classList.toggle("dark-mode");
+}
+document.getElementById('searchForm').addEventListener('submit', function (e) {
+e.preventDefault(); 
+
+var searchQuery = document.querySelector('#searchForm input[name="search2"]').value;
+
+alert('You searched for: ' + searchQuery);
+});
+
+    </script>
+</body>
+</html>
