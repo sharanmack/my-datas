@@ -1,0 +1,102 @@
+<html>
+   <head>
+    <style>
+        body {font-family: Arial, Helvetica, sans-serif;}
+        form {border: 3px solid #f1f1f1;}
+        
+        input[type=number], input[type=password] {
+          width: 100%;
+          padding: 12px 20px;
+          margin: 8px 0;
+          display: inline-block;
+          border: 1px solid #ccc;
+          box-sizing: border-box;
+        }
+        
+        button {
+          background-color: #84dc6d;
+          color: rgb(255, 255, 255);
+          padding: 14px 20px;
+          margin: 8px 0;
+          border: none;
+          cursor: pointer;
+          width: 100%;
+        }
+        
+        button:hover {
+          opacity: 12;
+        }
+    
+        
+   
+        
+        
+        .container {
+          padding: 16px;
+        }
+        
+                h1 {
+                    text-align: center;
+                    color: rgba(55, 55, 48, 0.814);
+                }
+            
+        
+        span.psw {
+          float: right;
+          padding-top: 16px;
+        }
+        
+        @media screen and (max-width: 300px) {
+          span.psw {
+             display: block;
+             float: none;
+          }
+        
+        }
+        </style>
+      <script>
+   
+    function check() {
+            var nbr;
+            nbr =Number (document.getElementById("age").value);
+            
+            
+            if (isNaN(nbr)) {
+                alert("Please enter a valid age (numeric value).");
+                return;
+            }
+
+            // age = parseInt(age);
+
+            if (nbr < 18) {
+                alert("You can't view this page, sorry!");
+            } 
+            
+            else {
+                window.location.href = "http://127.0.0.1:5501/LOGIN.HTML";
+            }
+        }
+         
+      </script>
+   </head>
+   <body>
+    <style>
+        body {
+            background-image: url('./READY.JPG');
+            background-size: cover; 
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+    </style>
+    <br>
+    <h1>WELCOME</h1>
+    <hr>
+     <h1> ENTER YOUR AGE: <input id="age" type="text"></h1>
+      <button onclick="check()">Check</button>
+      <HR>
+   </body>
+</html>
+
+
+
+

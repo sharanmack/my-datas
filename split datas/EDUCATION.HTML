@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education Selection</title>
+</head>
+<body style="background:url('./1.jpg"></body>
+<body>
+  <a href="javascript:history.back()">
+    <button>Back</button>
+    <br>
+</a>
+<br>
+    <form id="educationForm">
+        <h3><label for="educationSelect">CHOOSE EDUCATION:</label>
+        <select name="EDUCATION" id="educationSelect">
+            <option value="SCHOOLING">School</option>
+            <option value="DEGREES">Degree</option>
+        </select>
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        document.getElementById('educationForm').addEventListener('submit', function (e) {
+            e.preventDefault(); 
+            
+            const selectedOption = document.getElementById('educationSelect').value;
+
+            if (selectedOption === 'SCHOOLING') {
+               
+                window.location.href = 'SCHOOL.HTML';
+            } else if (selectedOption === 'DEGREES') {
+             
+                window.location.href = 'DEGREE.HTML';
+            }
+        });
+    </script>
+</body>
+</html>

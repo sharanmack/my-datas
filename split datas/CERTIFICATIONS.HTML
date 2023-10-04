@@ -1,0 +1,60 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CERTIFICATIONS</title>
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+    
+</head>
+<body>
+    <body style="background:url('./DDD.jpg');"></body>
+    <a href="javascript:history.back()">
+        <button>Back</button>
+    </a>
+    <br>
+    
+    <h3>CERTIFICATIONS</h3>
+
+    <label for="yearSelect">SELECT YEAR:</label>
+    <select id="yearSelect">
+        <option value="2015">2015</option>
+        <option value="2016">2016</option>
+        <option value="2017">2017</option>
+        <option value="2018">2018</option>
+        <option value="2019">2019</option>
+    </select>
+
+    <p>SELECTED YEAR:<span id="selectedYear"></span></p>
+
+   
+    <h2><p class="certification hidden" data-year="2015">CLOUD CODER LEARNING (2015)</p></h2>
+    <h2><p class="certification hidden" data-year="2016">WHITE HAT HACKER LEVEL -1 (2016)</p></h2>
+    <h2><p class="certification hidden" data-year="2017">CISCO NETWORK (2017)</p></h2>
+    <h2><p class="certification hidden" data-year="2018">PHP & MYS (2018)</p></h2>
+    <h2><p class="certification hidden" data-year="2019">NATIONAL HANDGLOOM FASHION SHOW (2019)</p></h2>
+
+    <script>
+        const yearSelect = document.getElementById('yearSelect');
+        const selectedYear = document.getElementById('selectedYear');
+        const certifications = document.querySelectorAll('.certification');
+
+        yearSelect.addEventListener('change', function() {
+            const selected = yearSelect.value;
+            selectedYear.textContent = selected;
+            certifications.forEach(cert => cert.classList.add('hidden'));
+
+            const selectedCert = document.querySelector(`[data-year="${selected}"]`);
+            if (selectedCert) {
+                selectedCert.classList.remove('hidden');
+            }
+        });
+    </script>
+</body>
+</html>

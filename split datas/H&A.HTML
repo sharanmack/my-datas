@@ -1,0 +1,60 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HONORS & AWARDS</title>
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+    
+</head>
+<body>
+    <body style="background:url('./HJ.webp');"></body>
+    <a href="javascript:history.back()">
+        <button>Back</button>
+    </a>
+    <br>
+    
+    <h3>HONORS & AWARDS</h3>
+
+    <label for="yearSelect">SELECT YEAR:</label>
+    <select id="yearSelect">
+        <option value="2016">2016</option>
+        <option value="2017">2017</option>
+        <option value="2018">2018</option>
+        <option value="2019">2019</option>
+        <option value="2020">2020</option>
+    </select>
+
+    <p>SELECTED YEAR:<span id="selectedYear"></span></p>
+
+   
+    <h2><p class="certification hidden" data-year="2018">PHP & MYSQL Course((AUG 2018)</p></h2>
+    <h2><p class="certification hidden" data-year="2019">Microsoft VB.Net Programming Course((OCT 2019)</p></h2>
+    <h2><p class="certification hidden" data-year="2016">HTML Course((NOV 2016)</p></h2>
+    <h2><p class="certification hidden" data-year="2017">Linux & Shell Scripting((DEC 2017)</p></h2>
+    <h2><p class="certification hidden" data-year="2020">Oracle SQL & PL/SQL ((NOV 2020)</p></h2>
+
+    <script>
+        const yearSelect = document.getElementById('yearSelect');
+        const selectedYear = document.getElementById('selectedYear');
+        const certifications = document.querySelectorAll('.certification');
+
+        yearSelect.addEventListener('change', function() {
+            const selected = yearSelect.value;
+            selectedYear.textContent = selected;
+            certifications.forEach(cert => cert.classList.add('hidden'));
+
+            const selectedCert = document.querySelector(`[data-year="${selected}"]`);
+            if (selectedCert) {
+                selectedCert.classList.remove('hidden');
+            }
+        });
+    </script>
+</body>
+</html>

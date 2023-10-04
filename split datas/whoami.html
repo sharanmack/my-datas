@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        
+        #more {display: none;}
+
+        video {
+            width: 300px; 
+            height: 169px; 
+            margin-top: 20px; 
+        }
+
+        .button-container {
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        .button-style {
+            font-size: 20px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        /* Style for the like button */
+        .likeBtn {
+            color: darkblue; /* Change the color */
+            font-size: 24px; /* Change the font size */
+            margin-right: 10px; /* Add margin for spacing */
+        }
+
+        /* Style for the dislike button */
+        .dislikeBtn {
+            color: darkred; /* Change the color */
+            font-size: 24px; /* Change the font size */
+        }
+    </style>
+    <title>WHO AM I</title>
+</head>
+<body style="background:url('./F.webp')">
+    <a href="javascript:history.back()">
+        <button>Back</button>
+    </a>
+    <br>
+    <h2>WHO AM I:</h2>
+    <p>Passionate & Enthusiastic graduate greatly influenced by
+        the urge to learn more. Perfectionist in<span id="dots">......</span><span id="more"> work. Looking
+        forward for an opportunity that would help me to grow
+        technically and at the same time to know my maximum
+        potential that would help with the growth of the firm that
+        I'm about to work.</span></p>
+    <button onclick="myFunction()" id="myBtn">Read more</button>
+
+    <div class="main">
+        <div class="margin-top", "margin-right">
+            <div class="right">
+                <video src='VIDEO2.mp4' controls></video>
+            </div>
+        </div>
+    </div>
+
+    <div class="button-container">
+        <button name="button1" type="button" class="button-style">
+            <span id="likeCount">0</span> &nbsp;  
+            <i onclick="toggleLike()" id="likeBtn" class="fa fa-thumbs-up likeBtn"></i>
+        </button>
+        <button name="button2" type="button" class="button-style">
+            <span id="dislikeCount">0</span> &nbsp;  
+            <i onclick="toggleDislike()" id="dislikeBtn" class="fa fa-thumbs-down dislikeBtn"></i>
+        </button>
+    </div>
+
+    <script>
+        var expanded = false;
+        var likeActive = false;
+        var dislikeActive = false;
+        var likeCount = document.getElementById('likeCount');
+        var dislikeCount = document.getElementById('dislikeCount');
+
+        function myFunction() {
+            var dots = document.getElementById("dots");
+            var moreText = document.getElementById("more");
+            var btnText = document.getElementById("myBtn");
+
+            if (!expanded) {
+                dots.style.display = "none";
+                moreText.style.display = "inline";
+                btnText.innerHTML = "Read less";
+                expanded = true;
+            } else {
+                dots.style.display = "inline";
+                moreText.style.display = "none";
+                btnText.innerHTML = "Read more";
+                expanded = false;
+            }
+        }
+
+        function toggleLike() {
+            if (likeActive) {
+                likeBtn.classList.remove("fa-thumbs-up");
+                likeCount.innerText = parseInt(likeCount.innerText) - 1;
+            } else {
+                likeBtn.classList.add("fa-thumbs-up");
+                likeCount.innerText = parseInt(likeCount.innerText) + 1;
+            }
+            likeActive = !likeActive;
+        }
+
+        function toggleDislike() {
+            if (dislikeActive) {
+                dislikeBtn.classList.remove("fa-thumbs-down");
+                dislikeCount.innerText = parseInt(dislikeCount.innerText) - 1;
+            } else {
+                dislikeBtn.classList.add("fa-thumbs-down");
+                dislikeCount.innerText = parseInt(dislikeCount.innerText) + 1;
+            }
+            dislikeActive = !dislikeActive;
+        }
+    </script>
+</body>
+</html>
