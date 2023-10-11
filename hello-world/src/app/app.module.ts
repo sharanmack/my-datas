@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { WebappComponent } from './webapp/webapp.component';
 import { ImagecompComponent } from './imagecomp/imagecomp.component';
+import { MyDataComponent } from './my-data/my-data.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     WebappComponent,
-    ImagecompComponent
+    ImagecompComponent,
+    MyDataComponent
   ],
   imports: [
     BrowserModule,
